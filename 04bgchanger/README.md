@@ -1,16 +1,21 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📁 For Folder: `04bgchanger/README.md`
+```markdown
+# 📁 Project 04: Reactive Background Engine (Style Mutations Lab)
 
-Currently, two official plugins are available:
+This module focuses on managing layout interactions reactively by binding continuous data shifts directly onto inline document styles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧠 Key Technical Insights
 
-## React Compiler
+### 1. Declarative Inline Styles vs. Imperative Selectors
+Avoid targeting physical document layers using standard browser manipulation calls (`querySelector`). Instead, write descriptive bindings where layout attributes listen to dynamic state variables.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Callback Reference Optimization inside `onClick`
+The `onClick` parameter requires a functional reference pointer to fire operations successfully during interactions. Passing an un-wrapped parameter call directly inside execution tracks executes code prematurely during the parsing frame:
+```jsx
+// ❌ Incorrect Architecture (Triggers instant execution loop at runtime)
+onClick={setColor("red")}
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+//  Correct Framework (Provides a wrapped functional path hook)
+onClick={() => setColor("red")}
