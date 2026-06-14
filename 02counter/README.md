@@ -12,3 +12,12 @@ When multiple sequential layout state modification queues are called synchronous
 ```javascript
 setCounter(counter + 1);
 setCounter(counter + 1);
+
+React aggregates (batches) these updates into a single rendering optimization pass to prevent layout overhead. Every call reads the snapshot copy from the current execution thread frame, resulting in only a single consolidated computation.
+
+3. Bypassing Batching Loops via Functional Arguments
+To guarantee strict incremental updates, pass an explicit callback function that reads the dynamic, real-time updated functional memory block directly:
+
+JavaScript
+setCounter(prevCounter => prevCounter + 1);
+This forces individual executions to await previous state mutations sequentially.
