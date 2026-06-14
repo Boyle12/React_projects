@@ -1,16 +1,13 @@
-# React + Vite
+# 📁 Project 06: Currency Exchange Engine (Async Pipeline Lab)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This module targets real-time async data-fetching patterns, clean variable type-casting wrappers, and decoupled abstraction layer construction via customized stateful hook systems.
 
-Currently, two official plugins are available:
+## 🧠 Key Technical Insights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Custom Data Hooks Engineering Structure
+Custom hooks isolate tracking parameters away from functional display layers. By executing enclosed `useEffect` routines on network APIs, data models undergo automated internal object mapping safely.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. String Object Deconstruction & Safe Type-Casting
+Standard HTML input tags translate computational outputs as default text streams. Before submitting operational updates into structural context managers, values must pass rigid primitive numerical layout casting operations:
+```javascript
+const processedValue = Number(e.target.value);
