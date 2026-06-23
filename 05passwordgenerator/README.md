@@ -1,16 +1,18 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📁 For Folder: `05passwordgenerator/README.md`
+```markdown
+# 📁 Project 05: Password Generator Matrix (Computational Hooks Lab)
 
-Currently, two official plugins are available:
+An optimization lab exploring structural performance tuning via string memoization pipelines, interface synchronization side-effects, and structural non-reactive coordinate tracking hooks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧠 Key Technical Insights
 
-## React Compiler
+### 1. String Memoization Frameworks via `useCallback`
+Every layout mutation recreates function memory blocks inside structural execution spaces. `useCallback` intercepts this behavior, caching functional operational threads across rendering sweeps. It triggers regeneration *only* if targeted tracking matrix signals land inside the dependency layer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Lifecycle Orchestration Hooks (`useEffect`)
+Fires layout computing pipelines predictably instantly upon workspace mounting coordinates. It tracks internal configuration boundaries (`length`, `numberAllowed`), ensuring the core processing layer maintains synchronization.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. DOM Node Reference Anchoring via `useRef`
+Maintains mutable reference pointer configurations targeting physical elements directly. Modifying references inside `.current` hooks executes commands invisibly without scheduling unnecessary layout re-render sweeps.

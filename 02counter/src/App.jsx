@@ -3,11 +3,7 @@ import './App.css'
 
 function App() {
   const [counter, setCounter] = useState(15)
-  // counter is variable and set conter is method or function 
-  //let counter = 15
   const addValue = ()=>{
-    //setCounter (counter + 1) 
-    // when interviewer ask make a counter and add multiple no. at a time then the code is given in comment
     setCounter((prevCounter)=>prevCounter + 1)
     setCounter((prevCounter)=>prevCounter + 1)
     setCounter((prevCounter)=>prevCounter + 1)
@@ -15,8 +11,6 @@ function App() {
     setCounter((prevCounter)=>prevCounter + 1)
   }
   const removeValue = ()=>{
-    //setCounter(counter - 1)
-    // when interviewer ask make a counter and subtract multiple no. at a time then the code is given in comment
     setCounter((prevCounter)=>prevCounter - 1)
     setCounter((prevCounter)=>prevCounter - 1)
     setCounter((prevCounter)=>prevCounter - 1)
